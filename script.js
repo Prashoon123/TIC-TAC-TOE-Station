@@ -19,6 +19,8 @@ let circleTurn
 
 startGame()
 
+restartButton.addEventListener('click', startGame)
+
 function startGame () {
     circleTurn = false
     cellElements.forEach(cell => {
@@ -52,7 +54,7 @@ function endGame(draw) {
     if (draw) {
     winningMessageTextElement.innerText = 'Draw!'
     } else {
-        winningMessageTextElement.innerText = `${circleTurn ? "O" : "X"} WINS!`
+        winningMessageTextElement.innerText = `${circleTurn ? "O" : "X"} WINS!!`
     }
     winningMessageElement.classList.add('show')
 }
